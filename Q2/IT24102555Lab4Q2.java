@@ -26,7 +26,7 @@ public class IT24102555Lab4Q2 {
             System.out.print("Enter the percentage for lab marks (0-100): ");
             labPercentage = scanner.nextDouble();
 
-          (examPercentage + labPercentage != 100) {
+          if (examPercentage + labPercentage != 100) {
                 System.out.println("Invalid input. The percentages must add up to 100.");
             }
      
