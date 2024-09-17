@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FinalMarkCalculator {
+public class IT24102555Lab4Q2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
@@ -26,7 +26,7 @@ public class FinalMarkCalculator {
             System.out.print("Enter the percentage for lab marks (0-100): ");
             labPercentage = scanner.nextDouble();
 
-            if (examPercentage + labPercentage != 100) {
+          (examPercentage + labPercentage != 100) {
                 System.out.println("Invalid input. The percentages must add up to 100.");
             }
      
