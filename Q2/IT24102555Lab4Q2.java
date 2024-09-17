@@ -1,41 +1,41 @@
 import java.util.Scanner;
 
-public class IT24102555Lab4Q2
-{
-    public static void main(String[] args) 
-  {
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Please enter examMarks:");
-        double ExamMarks=input.nextDouble();
-
-if (ExamMarks<0 || ExamMarks>100)
-      { 
-         System.out.print("Invalid input.");
-       }
+public class FinalMarkCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         
-        System.out.print("Please enter Lab submission marks:");
-        double labMarks=input.nextDouble();
+        double examMarks, labMarks, examPercentage, labPercentage;
 
- if (labMarks<0 || labMarks>100)
-      { 
-         System.out.print("Invalid input.");
-       }
- 
-         System.out.print("Enter the percentage taken from the from the examMarks:");
-         double ExamPercentage=input.nextDouble();
-         System.out.print("Enter the percentage taken from the from the labMarks:");
-         double LabPercentage=input.nextDouble();
-      
- examMarks = examMarks * (exampercentage/100);
- labMarks = labMarks * (labpercentage/100);
- double finalMark=examMarks+labMarks;
+          
+            System.out.print("Enter exam marks (0-100): ");
+            examMarks = scanner.nextDouble();
 
-if (finalMarks>100)
-{
-    System.out.print("The percentage must add up to 100");
-}
-System.out.print("The final marks is:"+finalMark);
+                           if (examMarks < 0 || examMarks > 100) {
+                                 System.out.println("Invalid input. Exam marks must be between 0 and 100.");
+                                 }
+        
+            System.out.print("Enter lab submission marks (0-100): ");
+            labMarks = scanner.nextDouble();
+                            if (labMarks < 0 || labMarks > 100) {
+                                   System.out.println("Invalid input. Lab marks must be between 0 and 100.");
+                                  }
     
-     }
+            System.out.print("Enter the percentage for exam marks (0-100): ");
+            examPercentage = scanner.nextDouble();
+
+            System.out.print("Enter the percentage for lab marks (0-100): ");
+            labPercentage = scanner.nextDouble();
+
+            if (examPercentage + labPercentage != 100) {
+                System.out.println("Invalid input. The percentages must add up to 100.");
+            }
+     
+
+
+        double finalMark = (examMarks * (examPercentage / 100)) + (labMarks * (labPercentage / 100));
+
+
+        System.out.println("The final mark is: " + finalMark);
+
+    }
 }
